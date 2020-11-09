@@ -7,14 +7,14 @@ icon: grid
 {% capture default_grid_example %}
 <section class="sgds-section">
     <div class="sgds-container">
-        <div class="row">
-            <div class="col">
+        <div class="sgds-row">
+            <div class="sgds-col">
                 <h6>col 1</h6>
             </div>
-            <div class="col">
+            <div class="sgds-col">
                 <h6>col 2</h6>
             </div>
-            <div class="col">
+            <div class="sgds-col">
                 <h6>col 3</h6>
             </div>
         </div>
@@ -24,61 +24,61 @@ icon: grid
 
 {% capture grid_2_12_example %}
 <div class="sgds-container">
-    <div class="row">
-        <div class="col is-2">
+    <div class="sgds-row">
+        <div class="sgds-col is-2">
             <h6>is-2</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
     </div>
-    <div class="row">
-        <div class="col is-6">
+    <div class="sgds-row">
+        <div class="sgds-col is-6">
             <h6>is-6</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <h6>1</h6>
         </div>
     </div>
@@ -87,13 +87,13 @@ icon: grid
 
 {% capture offset_grid_example %}
 <div class="sgds-container">
-    <div class="row">
-        <div class="col is-6 is-offset-3">
+    <div class="sgds-row">
+        <div class="sgds-col is-6 is-offset-3">
             <h6>col is-6 is-offset-3</h6>
         </div>
     </div>
-    <div class="row">
-        <div class="col is-3 is-offset-9">
+    <div class="sgds-row">
+        <div class="sgds-col is-3 is-offset-9">
             <h6>col is-3 is-offset-9</h6>
         </div>
     </div>
@@ -101,26 +101,26 @@ icon: grid
 {% endcapture %}
 {% capture nested_grid_example %}
 <div class="sgds-container">
-    <div class="row">
-        <div class="col is-nested">
-            <div class="row">
-                <div class="col">
+    <div class="sgds-row">
+        <div class="sgds-col is-nested">
+            <div class="sgds-row">
+                <div class="sgds-col">
                     <h6>row 1 col 1</h6>
                 </div>
-                <div class="col">
+                <div class="sgds-col">
                     <h6>row 1 col 2</h6>
                 </div>
             </div>
         </div>
-        <div class="col is-nested">
-            <div class="row">
-                <div class="col">
+        <div class="sgds-col is-nested">
+            <div class="sgds-row">
+                <div class="sgds-col">
                     <h6>row 2 col 1</h6>
                 </div>
-                <div class="col">
+                <div class="sgds-col">
                     <h6>row 2 col 2</h6>
                 </div>
-                <div class="col">
+                <div class="sgds-col">
                     <h6>row 2 col 3</h6>
                 </div>
             </div>
@@ -131,20 +131,20 @@ icon: grid
 
 {% capture multiline_example %}
 <div class="sgds-container">
-    <div class="row is-multiline">
-        <div class="col is-12">
+    <div class="sgds-row is-multiline">
+        <div class="sgds-col is-12">
             <h6>col 1</h6>
         </div>
-        <div class="col is-5">
+        <div class="sgds-col is-5">
             <h6>col 2</h6>
         </div>
-        <div class="col is-7">
+        <div class="sgds-col is-7">
             <h6>col 3</h6>
         </div>
-        <div class="col is-5">
+        <div class="sgds-col is-5">
             <h6>col 4</h6>
         </div>
-        <div class="col is-8">
+        <div class="sgds-col is-8">
             <h6>col 5</h6>
         </div>
     </div>
@@ -228,7 +228,7 @@ icon: grid
 <hr />
 
 <h3>Style</h3>
-<table class="table is-bordered is-size-8">
+<table class="sgds-table is-bordered is-size-8">
     <thead>
         <tr>
             <th>Modifier</th>

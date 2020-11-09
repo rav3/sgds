@@ -11,18 +11,20 @@ js: true
     <ul class="no-margin" role="tablist">
         <li class="is-active">
             <a data-tab="#tab1" role="tab" aria-selected="true" aria-controls="tab1">
-                <i class="sgds-icon sgds-icon-place padding--right--sm"></i>
-                Tab 1
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-place"></i></span>
+                <span>Tab 1</span>
             </a>
         </li>
         <li>
             <a data-tab="#tab2" role="tab" aria-selected="false" aria-controls="tab2">
-                <i class="sgds-icon sgds-icon-boat padding--right--sm"></i>Tab 2
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-boat"></i></span>
+                <span>Tab 2</span>
             </a>
         </li>
         <li>
             <a data-tab="#tab3" role="tab" aria-selected="false" aria-controls="tab3">
-                <i class="sgds-icon sgds-icon-map padding--right--sm"></i>Tab 3
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-map"></i></span>
+                <span>Tab 3</span>
             </a>
         </li>
     </ul>
@@ -30,18 +32,18 @@ js: true
 {% endcapture %}
 
 {% capture tab-content %}
-<div class="row" id="tab1">
-    <div class="col">
+<div class="sgds-row" id="tab1">
+    <div class="sgds-col">
         <p>Tab content 1</p>
     </div>
 </div>
-<div class="row" id="tab2">
-    <div class="col">
+<div class="sgds-row" id="tab2">
+    <div class="sgds-col">
         <p>Tab content 2</p>
     </div>
 </div>
-<div class="row" id="tab3">
-    <div class="col">
+<div class="sgds-row" id="tab3">
+    <div class="sgds-col">
         <p>Tab content 3</p>
     </div>
 </div>
@@ -58,45 +60,24 @@ js: true
     Each tab displays a different type of tab.
 </p>
 
-<div class="sgds-tabs">
-    <ul class="no-margin" role="tablist">
-        <li class="is-active">
-            <a data-tab="#tab1" role="tab" aria-selected="true" aria-controls="tab1">
-                <i class="sgds-icon sgds-icon-place padding--right--sm"></i>
-                Tab 1
-            </a>
-        </li>
-        <li>
-            <a data-tab="#tab2" role="tab" aria-selected="false" aria-controls="tab2">
-                <i class="sgds-icon sgds-icon-boat padding--right--sm"></i>
-                Tab 2
-            </a>
-        </li>
-        <li>
-            <a data-tab="#tab3" role="tab" aria-selected="false" aria-controls="tab3">
-                <i class="sgds-icon sgds-icon-map padding--right--sm"></i>
-                Tab 3
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="row" id="tab1" role="tabpanel" aria-labelledby="tab1">
-    <div class="col">
-        <div class="row">
-            <div class="col"><h5>Tab 1 Content</h5></div>
-            <div class="col">
+{{tab-selector}}
+<div class="sgds-row" id="tab1" role="tabpanel" aria-labelledby="tab1">
+    <div class="sgds-col">
+        <div class="sgds-row">
+            <div class="sgds-col"><h5>Tab 1 Content</h5></div>
+            <div class="sgds-col">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos fugiat in
                 incidunt mollitia quam qui totam vel veritatis vero.
             </div>
-            <div class="col">
+            <div class="sgds-col">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos fugiat in
                 incidunt mollitia quam qui totam vel veritatis vero.
             </div>
         </div>
     </div>
 </div>
-<div class="row" id="tab2" role="tabpanel" aria-labelledby="tab2">
-    <div class="col">
+<div class="sgds-row" id="tab2" role="tabpanel" aria-labelledby="tab2">
+    <div class="sgds-col">
         <h5>Tab 2 Content</h5>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt enim illo
@@ -104,8 +85,8 @@ js: true
         </p>
     </div>
 </div>
-<div class="row" id="tab3" role="tabpanel" aria-labelledby="tab3">
-    <div class="col">
+<div class="sgds-row" id="tab3" role="tabpanel" aria-labelledby="tab3">
+    <div class="sgds-col">
         <h5>Tab 3 Content</h5>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aspernatur
@@ -142,7 +123,7 @@ js: true
 <hr/>
 
 <h3>Styles</h3>
-<table class="table">
+<table class="sgds-table">
     <thead>
         <tr>
             <th>Modifier</th>
@@ -177,20 +158,20 @@ js: true
     <ul class="no-margin" role="tablist">
         <li class="is-active">
             <a data-tab="#t1" role="tab" aria-selected="true" aria-controls="t1">
-                <i class="sgds-icon sgds-icon-place padding--right--sm"></i>
-                Tab 1
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-place"></i></span> 
+                <span>Tab 1</span>
             </a>
         </li>
         <li>
             <a data-tab="#t2" role="tab" aria-selected="false" aria-controls="t2">
-                <i class="sgds-icon sgds-icon-boat padding--right--sm"></i>
-                Tab 2
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-boat"></i></span>
+                <span>Tab 2</span>
             </a>
         </li>
         <li>
             <a data-tab="#t3" role="tab" aria-selected="false" aria-controls="t3">
-                <i class="sgds-icon sgds-icon-map padding--right--sm"></i>
-                Tab 3
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-map"></i></span>
+                <span>Tab 3</span>
             </a>
         </li>
     </ul>
@@ -202,24 +183,24 @@ js: true
 <hr/>
 
 <h4>Toggle</h4>
-<div class="sgds-tabs is-toggle">
+<div class="sgds-tabs is-boxed">
     <ul class="no-margin" role="tablist">
         <li class="is-active">
             <a data-tab="#t4" role="tab" aria-selected="true" aria-controls="t4">
-                <i class="sgds-icon sgds-icon-place padding--right--sm"></i>
-                Tab 1
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-place"></i></span> 
+                <span>Tab 1</span>
             </a>
         </li>
         <li>
             <a data-tab="#t5" role="tab" aria-selected="false" aria-controls="t5">
-                <i class="sgds-icon sgds-icon-boat padding--right--sm"></i>
-                Tab 2
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-boat"></i></span>
+                <span>Tab 2</span>
             </a>
         </li>
         <li>
             <a data-tab="#t6" role="tab" aria-selected="false" aria-controls="t6">
-                <i class="sgds-icon sgds-icon-map padding--right--sm"></i>
-                Tab 3
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-map"></i></span>
+                <span>Tab 3</span>
             </a>
         </li>
     </ul>
@@ -231,24 +212,24 @@ js: true
 <hr/>
 
 <h4>Centered</h4>
-<div class="sgds-tabs is-centered">
+<div class="sgds-tabs is-boxed">
     <ul class="no-margin" role="tablist">
         <li class="is-active">
             <a data-tab="#t7" role="tab" aria-selected="true" aria-controls="t7">
-                <i class="sgds-icon sgds-icon-place padding--right--sm"></i>
-                Tab 1
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-place"></i></span> 
+                <span>Tab 1</span>
             </a>
         </li>
         <li>
             <a data-tab="#t8" role="tab" aria-selected="false" aria-controls="t8">
-                <i class="sgds-icon sgds-icon-boat padding--right--sm"></i>
-                Tab 2
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-boat"></i></span>
+                <span>Tab 2</span>
             </a>
         </li>
         <li>
             <a data-tab="#t9" role="tab" aria-selected="false" aria-controls="t9">
-                <i class="sgds-icon sgds-icon-map padding--right--sm"></i>
-                Tab 3
+                <span class="icon is-small"><i class="sgds-icon sgds-icon-map"></i></span>
+                <span>Tab 3</span>
             </a>
         </li>
     </ul>

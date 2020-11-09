@@ -44,10 +44,10 @@ icon: icons
 
 <h3>{{cat.category}} Icons</h3>
 
-<div class="row is-multiline is-mobile padding--left padding--right">
+<div class="sgds-row is-multiline is-mobile padding--left padding--right">
     {% assign icons = cat.icons | sort: 'iconName' %}
     {% for icon in icons %}
-    <div class="col is-2-desktop is-4-tablet is-4-mobile is-boxed is-flex ">
+    <div class="sgds-col is-2-desktop is-4-tablet is-4-mobile is-boxed is-flex ">
         <a class="has-text-dark icon-clipboard-btn sgds-tooltip" data-clipboard-text=".sgds-icon-{{icon.iconName}}" data-tooltip="Click to Copy">
             <div class="icon-container">
                 <span class="sgds-icon sgds-icon-{{icon.iconName}} is-size-4" role="img" aria-label="{{icon.iconName}}"></span>

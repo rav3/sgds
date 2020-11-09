@@ -56,9 +56,9 @@ coloursList:
     <code>has-</code> prefixes to most elements.
 </p>
 
-<div class="row is-multiline margin--top--sm">
+<div class="sgds-row is-multiline margin--top--sm">
     {%- for colour in page.coloursList -%}
-    <div class="col is-3 has-background-{{colour.name}}
+    <div class="sgds-col is-3 has-background-{{colour.name}}
         {% if colour.name == 'white' or colour.name == 'light' or colour.name == 'warning' -%}
             has-text-black
         {%- else -%}
@@ -97,7 +97,7 @@ coloursList:
 
 <p>Example of <code>is-*color*</code> classes for the <a href="/doc/button/">Button</a> component:</p>
 
-<table class="table margin--top--sm">
+<table class="sgds-table margin--top--sm">
     <thead>
         <tr>
             <th>Class</th>
@@ -126,7 +126,7 @@ coloursList:
 
 <h4>Text colours</h4>
 
-<table class="table">
+<table class="sgds-table">
     <thead>
         <tr>
             <th>Class</th>
@@ -163,7 +163,7 @@ Use the <code>has-text-{{ colour.name }}</code> colour class to set text colour
 
 <h4>Background colours</h4>
 
-<table class="table">
+<table class="sgds-table">
     <thead>
         <tr>
             <th>Class</th>

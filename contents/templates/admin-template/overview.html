@@ -5,10 +5,10 @@ layout: admin-template/layouts-single-side-nav
 ---
 {% include admin-template/base.html %}
 <div class="sgds-container is-fluid is-boxed margin--bottom has-background-white padding">
-    <div class="row">
-        <div class="col">
-            <nav class="level">
-                <div class="level-item has-text-centered">
+    <div class="sgds-row">
+        <div class="sgds-col">
+            <nav class="sgds-level">
+                <div class="sgds-level-item has-text-centered">
                     <div>
                         <p class="heading sgds-tooltip" data-tooltip="Hello">Pending Orders</p>
                         <p class="title">120</p>
@@ -18,13 +18,13 @@ layout: admin-template/layouts-single-side-nav
                         </p>
                     </div>
                 </div>
-                <div class="level-item has-text-centered">
+                <div class="sgds-level-item has-text-centered">
                     <div>
                         <p class="heading">Orders Today</p>
                         <p class="title">20</p>
                     </div>
                 </div>
-                <div class="level-item has-text-centered">
+                <div class="sgds-level-item has-text-centered">
                     <div>
                         <p class="heading">Total Earnings</p>
                         <p class="title">
@@ -43,8 +43,8 @@ layout: admin-template/layouts-single-side-nav
 </div>
 
 <div class="sgds-container is-fluid">
-    <div class="row">
-        <div class="col">
+    <div class="sgds-row">
+        <div class="sgds-col">
             <div class="sgds-card">
                 <div class="sgds-card-header">
                     <p class="sgds-card-header-title">
@@ -53,8 +53,8 @@ layout: admin-template/layouts-single-side-nav
                     <a class="sgds-card-header-icon sgds-tooltip" data-tooltip="This is a tooltip"><i class="sgds-icon sgds-icon-circle-info"></i></a>
                 </div>
                 <div class="sgds-card-content">
-                    <div class="row">
-                        <div class="col">
+                    <div class="sgds-row">
+                        <div class="sgds-col">
                             <div class="sgds-dropdown is-hoverable">
                                 <div class="sgds-dropdown-trigger">
                                     <button class="sgds-button is-primary is-outlined" aria-haspopup="true"
@@ -74,28 +74,28 @@ layout: admin-template/layouts-single-side-nav
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col is-5">
-                            <div class="row is-multiline">
-                                <div class="col is-6">
+                    <div class="sgds-row">
+                        <div class="sgds-col is-5">
+                            <div class="sgds-row is-multiline">
+                                <div class="sgds-col is-6">
                                     <h1 class="has-text-primary has-text-weight-bold">34,100</h1>
                                     <p class="has-text-info">Total Orders</p>
                                 </div>
-                                <div class="col is-6">
+                                <div class="sgds-col is-6">
                                     <h1 class="has-text-primary has-text-weight-bold">2,640</h1>
                                     <p class="has-text-info">Visits</p>
                                 </div>
-                                <div class="col is-6">
+                                <div class="sgds-col is-6">
                                     <h1 class="has-text-primary has-text-weight-bold">25,000</h1>
                                     <p class="has-text-info">Customers</p>
                                 </div>
-                                <div class="col is-6">
+                                <div class="sgds-col is-6">
                                     <h1 class="has-text-primary has-text-weight-bold">$1,000,000</h1>
                                     <p class="has-text-info">Net Profits</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="sgds-col">
                             <canvas id="topAPI" height="400"></canvas>
                         </div>
                     </div>
@@ -107,8 +107,8 @@ layout: admin-template/layouts-single-side-nav
 </div>
 
 <div class="sgds-container is-fluid">
-    <div class="row">
-        <div class="col">
+    <div class="sgds-row">
+        <div class="sgds-col">
             <div class="sgds-card">
                 <div class="sgds-card-header">
                     <div class="sgds-card-header-title">
@@ -119,7 +119,7 @@ layout: admin-template/layouts-single-side-nav
                     </a>
                 </div>
                 <div class="sgds-card-content">
-                    <table class="table is-fullwidth is-paddingless">
+                    <table class="sgds-table is-fullwidth is-paddingless">
                         <thead>
                         <tr class="has-text-weight-bold">
                             <td>#</td>
@@ -162,7 +162,7 @@ layout: admin-template/layouts-single-side-nav
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="sgds-col">
             <div class="sgds-card">
                 <div class="sgds-card-header">
                     <div class="sgds-card-header-title">
@@ -174,7 +174,7 @@ layout: admin-template/layouts-single-side-nav
                     </a>
                 </div>
                 <div class="sgds-card-content">
-                    <table class="table is-fullwidth is-paddingless">
+                    <table class="sgds-table is-fullwidth is-paddingless">
                         <thead>
                         <tr class="has-text-weight-bold">
                             <td>#</td>

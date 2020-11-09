@@ -7,30 +7,30 @@ icon: container
 
 {% capture is-mobile-example %}
 <div class="sgds-container">
-  <div class="row is-mobile">
-    <div class="col">1</div>
-    <div class="col">1</div>
-    <div class="col">1</div>
-    <div class="col">1</div>
+  <div class="sgds-row is-mobile">
+    <div class="sgds-col">1</div>
+    <div class="sgds-col">1</div>
+    <div class="sgds-col">1</div>
+    <div class="sgds-col">1</div>
   </div>
 </div>
 {% endcapture %}
 
 {% capture is-desktop-example %}
 <div class="sgds-container">
-  <div class="row is-desktop">
-    <div class="col">1</div>
-    <div class="col">1</div>
-    <div class="col">1</div>
-    <div class="col">1</div>
+  <div class="sgds-row is-desktop">
+    <div class="sgds-col">1</div>
+    <div class="sgds-col">1</div>
+    <div class="sgds-col">1</div>
+    <div class="sgds-col">1</div>
   </div>
 </div>
 {% endcapture %}
 
 {% capture is-device-example %}
 <div class="sgds-container">
-  <div class="row is-mobile">
-    <div class="col is-11-mobile is-7-tablet is-5-desktop is-3-widescreen is-1-fullhd">
+  <div class="sgds-row is-mobile">
+    <div class="sgds-col is-11-mobile is-7-tablet is-5-desktop is-3-widescreen is-1-fullhd">
       <br />
       <code>is-11-mobile</code><br>
       <code>is-7-tablet</code><br>
@@ -38,7 +38,7 @@ icon: container
       <code>is-3-widescreen</code><br>
       <code>is-1-fullhd</code>
     </div>
-    <div class="col">Col</div>
+    <div class="sgds-col">Col</div>
   </div>
 </div>
 {% endcapture %}
@@ -57,7 +57,7 @@ icon: container
   specific viewport size: <b>mobile, tablet, desktop, widescreen and fullhd</b>.
 </p>
 
-<table class="table is-bordered is-size-8">
+<table class="sgds-table is-bordered is-size-8">
   <thead>
     <tr>
       <td>Class (x can take values between 1 and 12)</td>

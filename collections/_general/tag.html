@@ -80,22 +80,22 @@ js: false
 {% endcapture %}
 
 {% capture tags_add_on_grouped_2 %}
-<div class="field is-grouped is-grouped-multiline">
-  <div class="control">
+<div class="sgds-field is-grouped is-grouped-multiline">
+  <div class="sgds-control">
     <div class="sgds-tags has-addons">
       <span class="sgds-tag is-secondary">CSS</span>
       <a class="sgds-tag is-delete"></a>
     </div>
   </div>
 
-  <div class="control">
+  <div class="sgds-control">
     <div class="sgds-tags has-addons">
       <span class="sgds-tag is-secondary">JS</span>
       <a class="sgds-tag is-delete"></a>
     </div>
   </div>
 
-  <div class="control">
+  <div class="sgds-control">
     <div class="sgds-tags has-addons">
       <span class="sgds-tag is-secondary">React</span>
       <a class="sgds-tag is-delete"></a>
@@ -104,23 +104,23 @@ js: false
 </div>
 {% endcapture %}
 {% capture tags_add_on_grouped %}
-<div class="field is-grouped is-grouped-multiline">
+<div class="sgds-field is-grouped is-grouped-multiline">
   <!-- The .control modifier adds margin between each has-addons tags -->
-  <div class="control">
+  <div class="sgds-control">
     <div class="sgds-tags has-addons">
       <span class="sgds-tag is-dark">npm</span>
       <span class="sgds-tag is-info">v{{site.sgds-version}}</span>
     </div>
   </div>
 
-  <div class="control">
+  <div class="sgds-control">
     <div class="sgds-tags has-addons">
       <span class="sgds-tag is-dark">build</span>
       <span class="sgds-tag is-success">passing</span>
     </div>
   </div>
   
-  <div class="control">
+  <div class="sgds-control">
     <div class="sgds-tags has-addons">
       <span class="sgds-tag is-dark">chat</span>
       <span class="sgds-tag is-primary">telegram</span>
@@ -165,8 +165,8 @@ js: false
 <p>Wrap tags with an element with the <code>.sgds-tags</code> class to easily display a list of tags that are
   vertically centered and automatically wrap lines.</p>
 <div class="sgds-example-others">
-    <div class="row">
-        <div class="col is-12-mobile is-8-tablet">
+    <div class="sgds-row">
+        <div class="sgds-col is-12-mobile is-8-tablet">
             {{tags_list}}
         </div>
     </div>
@@ -233,7 +233,7 @@ js: false
 <hr>
 
 <h3>Styles</h3>
-<table class="table">
+<table class="sgds-table">
     <thead>
         <tr>
             <th>Modifier</th>

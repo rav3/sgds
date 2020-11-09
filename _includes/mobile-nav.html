@@ -11,14 +11,14 @@
         </div>
         <div class="sgds-dropdown-menu docs-nav-dropdown" id="sgds-dropdown-menu" role="menuitem">
             <div class="sgds-dropdown-content padding has-background-light">
-                <div class="row is-multiline is-mobile">
-                    <div class="col is-12">
+                <div class="sgds-row is-multiline is-mobile">
+                    <div class="sgds-col is-12">
                             <a class="is-block is-size-7" href="/docs/getting-started/">Getting Started</a>
                     </div>
-                    <div class="col is-12">
+                    <div class="sgds-col is-12">
                             <a class="is-block is-size-7" href="/docs/installation/">Installation</a>
                     </div>
-                    <div class="col is-12">
+                    <div class="sgds-col is-12">
                             <a class="is-block is-size-7" href="/docs/customise-sgds/">Customise SGDS with Sass</a>
                     </div>
                 </div>
@@ -28,10 +28,10 @@
                         <hr class="margin--bottom--sm margin--top--sm">
                         {% assign name = collection.label %}
                         <p>{{name | capitalize }}</p>
-                        <div class="row is-multiline is-mobile">
+                        <div class="sgds-row is-multiline is-mobile">
                             {% assign items = site[name] | sort:'order' %}
                             {% for item in items %}
-                            <div class="col is-3-desktop is-4-tablet is-6-mobile">
+                            <div class="sgds-col is-3-desktop is-4-tablet is-6-mobile">
                                 <a href="{{ item.url }}" class="is-flex component-card">
                                     <div class="sgds-card sgds-card-button">
                                         <div class="sgds-card-content has-text-centered">
@@ -74,11 +74,11 @@
                 {%- assign collectionCategories = currentCollection.docs | sort: "category" | group_by: "category" -%}
                 {%- for category in collectionCategories -%}
                 {%- assign items = category.items | sort: "title" -%}
-                <div class="row is-multiline is-mobile">
-                    <div class="col is-12"><p>{{category.name | capitalize}}</p></div>
+                <div class="sgds-row is-multiline is-mobile">
+                    <div class="sgds-col is-12"><p>{{category.name | capitalize}}</p></div>
                     
                     {% for item in items %}
-                    <div class="col is-12">
+                    <div class="sgds-col is-12">
                         <a class="padding--left" href="{{item.url}}">{{item.title}}</a>
                     </div>
                     {% endfor %}
@@ -101,12 +101,12 @@
         </div>
         <div class="sgds-dropdown-menu" id="sgds-dropdown-menu" role="menu">
             <div class="sgds-dropdown-content padding">
-                <div class="row is-multiline is-mobile">
+                <div class="sgds-row is-multiline is-mobile">
                     {% assign activeClass = nil %}
                     {% if page.url contains "patterns/overview/" %}
                         {% assign activeClass = 'is-active' %}
                     {% endif %}
-                    <div class="col is-12">
+                    <div class="sgds-col is-12">
                         <a href="/patterns/overview" class="{{ activeClass }} is-size-7">Overview</a>
                     </div>
                     
@@ -117,7 +117,7 @@
                             {% assign class = 'is-active' %}
                         {% endif %}
                         {% if pattern.title != 'Overview' %}
-                        <div class="col is-12">
+                        <div class="sgds-col is-12">
                             <a href="{{ pattern.url }}" class="{{ class }} is-size-7">{{ pattern.title }}</a>
                         </div>
                         {% endif %}

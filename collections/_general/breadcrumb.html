@@ -87,31 +87,31 @@ breadcrumbList:
 <hr />
 
 <h3 class="has-text-weight-semibold">2) Breadcrumb with alternative seperators:</h3>
-<div class="row is-multiline">
+<div class="sgds-row is-multiline">
     {%- for breadcrumb in page.breadcrumbList -%}
     {% endfor %}
-    <div class="col is-6 margin--bottom">
+    <div class="sgds-col is-6 margin--bottom">
         <p>With Arrow<br><code>has-arrow-separator</code></p>
         <div class="sgds-example-others">{{arrow_example}}</div>
         {% highlight html%}{{arrow_example}}{% endhighlight %}
         <button class="sgds-button clipboard-btn is-primary is-outlined " data-clipboard-target='.highlight0'>Copy
             snippet</button>
     </div>
-    <div class="col is-6 margin--bottom">
+    <div class="sgds-col is-6 margin--bottom">
         <p>With Bullet<br><code>has-bullet-separator</code></p>
         <div class="sgds-example-others">{{bullet_example}}</div>
         {% highlight html%}{{bullet_example}}{% endhighlight %}
         <button class="sgds-button clipboard-btn is-primary is-outlined " data-clipboard-target='.highlight1'>Copy
             snippet</button>
     </div>
-    <div class="col is-6 margin--bottom">
+    <div class="sgds-col is-6 margin--bottom">
         <p>With Dot<br><code>has-dot-separator</code></p>
         <div class="sgds-example-others">{{dot_example}}</div>
         {% highlight html%}{{dot_example}}{% endhighlight %}
         <button class="sgds-button clipboard-btn is-primary is-outlined " data-clipboard-target='.highlight2'>Copy
             snippet</button>
     </div>
-    <div class="col is-6 margin--bottom">
+    <div class="sgds-col is-6 margin--bottom">
         <p>With Succeeds<br><code>has-succeeds-separator</code></p>
         <div class="sgds-example-others">{{succeeds_example}}</div>
         {% highlight html%}{{succeeds_example}}{% endhighlight %}

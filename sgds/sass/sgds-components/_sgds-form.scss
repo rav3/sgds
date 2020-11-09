@@ -87,8 +87,8 @@ $hint-color : $grey !default;
   }
 }
 
-.input,
-.textarea {
+.sgds-input,
+.sgds-textarea {
   @include input;
 
   box-shadow: $input-shadow;
@@ -140,7 +140,7 @@ $hint-color : $grey !default;
   }
 }
 
-.input {
+.sgds-input {
   border-radius: $input-radius;
 
   &.is-rounded {
@@ -158,7 +158,7 @@ $hint-color : $grey !default;
   }
 }
 
-.textarea {
+.sgds-textarea {
   display: block;
   max-width: 100%;
   min-width: 100%;
@@ -180,8 +180,8 @@ $hint-color : $grey !default;
   }
 }
 
-.checkbox,
-.radio {
+.sgds-checkbox,
+.sgds-radio {
   cursor: pointer;
   display: inline-block;
   line-height: 1.25;
@@ -201,13 +201,13 @@ $hint-color : $grey !default;
   }
 }
 
-.radio {
+.sgds-radio {
   & + .radio {
     margin-left: 0.5em;
   }
 }
 
-.select {
+.sgds-select {
   display: inline-block;
   max-width: 100%;
   position: relative;
@@ -351,7 +351,7 @@ $hint-color : $grey !default;
   }
 }
 
-.file {
+.sgds-file {
   @extend %unselectable;
 
   align-items: stretch;
@@ -365,7 +365,7 @@ $hint-color : $grey !default;
     $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
-      .file-cta {
+      .sgds-file-cta {
         background-color: $color;
         border-color: transparent;
         color: $color-invert;
@@ -373,7 +373,7 @@ $hint-color : $grey !default;
 
       &:hover,
       &.is-hovered {
-        .file-cta {
+        .sgds-file-cta {
           background-color: darken($color, 2.5%);
           border-color: transparent;
           color: $color-invert;
@@ -382,7 +382,7 @@ $hint-color : $grey !default;
 
       &:focus,
       &.is-focused {
-        .file-cta {
+        .sgds-file-cta {
           border-color: transparent;
           box-shadow: 0 0 0.5em rgba($color, 0.25);
           color: $color-invert;
@@ -391,7 +391,7 @@ $hint-color : $grey !default;
 
       &:active,
       &.is-active {
-        .file-cta {
+        .sgds-file-cta {
           background-color: darken($color, 5%);
           border-color: transparent;
           color: $color-invert;
@@ -408,7 +408,7 @@ $hint-color : $grey !default;
   &.is-medium {
     font-size: $size-medium;
 
-    .file-icon {
+    .sgds-file-icon {
       .fa {
         font-size: 21px;
       }
@@ -418,7 +418,7 @@ $hint-color : $grey !default;
   &.is-large {
     font-size: $size-large;
 
-    .file-icon {
+    .sgds-file-icon {
       .fa {
         font-size: 28px;
       }
@@ -427,43 +427,43 @@ $hint-color : $grey !default;
 
   // Modifiers
   &.has-name {
-    .file-cta {
+    .sgds-file-cta {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
     }
 
-    .file-name {
+    .sgds-file-name {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
     }
 
     &.is-empty {
-      .file-cta {
+      .sgds-file-cta {
         border-radius: $file-radius;
       }
 
-      .file-name {
+      .sgds-file-name {
         display: none;
       }
     }
   }
 
   &.is-boxed {
-    .file-label {
+    .sgds-file-label {
       flex-direction: column;
     }
 
-    .file-cta {
+    .sgds-file-cta {
       flex-direction: column;
       height: auto;
       padding: 1em 3em;
     }
 
-    .file-name {
+    .sgds-file-name {
       border-width: 0 1px 1px;
     }
 
-    .file-icon {
+    .sgds-file-icon {
       height: 1.5em;
       width: 1.5em;
 
@@ -473,29 +473,29 @@ $hint-color : $grey !default;
     }
 
     &.is-small {
-      .file-icon .fa {
+      .sgds-file-icon .fa {
         font-size: 14px;
       }
     }
 
     &.is-medium {
-      .file-icon .fa {
+      .sgds-file-icon .fa {
         font-size: 28px;
       }
     }
 
     &.is-large {
-      .file-icon .fa {
+      .sgds-file-icon .fa {
         font-size: 35px;
       }
     }
 
     &.has-name {
-      .file-cta {
+      .sgds-file-cta {
         border-radius: $file-radius $file-radius 0 0;
       }
 
-      .file-name {
+      .sgds-file-name {
         border-radius: 0 0 $file-radius $file-radius;
         border-width: 0 1px 1px;
       }
@@ -507,11 +507,11 @@ $hint-color : $grey !default;
   }
 
   &.is-fullwidth {
-    .file-label {
+    .sgds-file-label {
       width: 100%;
     }
 
-    .file-name {
+    .sgds-file-name {
       flex-grow: 1;
       max-width: none;
     }
@@ -520,11 +520,11 @@ $hint-color : $grey !default;
   &.is-right {
     justify-content: flex-end;
 
-    .file-cta {
+    .sgds-file-cta {
       border-radius: 0 $file-radius $file-radius 0;
     }
 
-    .file-name {
+    .sgds-file-name {
       border-radius: $file-radius 0 0 $file-radius;
       border-width: 1px 0 1px 1px;
       order: -1;
@@ -532,7 +532,7 @@ $hint-color : $grey !default;
   }
 }
 
-.file-label {
+.sgds-file-label {
   align-items: stretch;
   display: flex;
   cursor: pointer;
@@ -541,29 +541,29 @@ $hint-color : $grey !default;
   position: relative;
 
   &:hover {
-    .file-cta {
+    .sgds-file-cta {
       background-color: darken($file-cta-background-color, 2.5%);
       color: $file-cta-hover-color;
     }
 
-    .file-name {
+    .sgds-file-name {
       border-color: darken($file-name-border-color, 2.5%);
     }
   }
 
   &:active {
-    .file-cta {
+    .sgds-file-cta {
       background-color: darken($file-cta-background-color, 5%);
       color: $file-cta-active-color;
     }
 
-    .file-name {
+    .sgds-file-name {
       border-color: darken($file-name-border-color, 5%);
     }
   }
 }
 
-.file-input {
+.sgds-file-input {
   height: 0.01em;
   left: 0;
   outline: none;
@@ -572,8 +572,8 @@ $hint-color : $grey !default;
   width: 0.01em;
 }
 
-.file-cta,
-.file-name {
+.sgds-file-cta,
+.sgds-file-name {
   @include control;
 
   border-color: $file-border-color;
@@ -584,12 +584,12 @@ $hint-color : $grey !default;
   white-space: nowrap;
 }
 
-.file-cta {
+.sgds-file-cta {
   background-color: $file-cta-background-color;
   color: $file-cta-color;
 }
 
-.file-name {
+.sgds-file-name {
   border-color: $file-name-border-color;
   border-style: $file-name-border-style;
   border-width: $file-name-border-width;
@@ -600,7 +600,7 @@ $hint-color : $grey !default;
   text-overflow: ellipsis;
 }
 
-.file-icon {
+.sgds-file-icon {
   align-items: center;
   display: flex;
   height: 1em;
@@ -613,7 +613,7 @@ $hint-color : $grey !default;
   }
 }
 
-.label {
+.sgds-label {
   color: $label-color;
   display: block;
   font-size: $size-normal;
@@ -637,7 +637,7 @@ $hint-color : $grey !default;
   }
 }
 
-.hint {
+.sgds-hint {
   display:block;
   font-size: $hint-size;
   font-weight: lighter;
@@ -651,7 +651,7 @@ $hint-color : $grey !default;
   }
 }
 
-.help {
+.sgds-help {
   display: block;
   font-size: $help-size;
   margin-top: 0.25rem;
@@ -667,7 +667,7 @@ $hint-color : $grey !default;
 
 // Containers
 
-.field {
+.sgds-field {
   &:not(:last-child) {
     margin-bottom: 0.75rem;
   }
@@ -677,23 +677,23 @@ $hint-color : $grey !default;
     display: flex;
     justify-content: flex-start;
 
-    .control {
+    .sgds-control {
       &:not(:last-child) {
         margin-right: -1px;
       }
 
       &:not(:first-child):not(:last-child) {
         .sgds-button,
-        .input,
-        .select select {
+        .sgds-input,
+        .sgds-select select {
           border-radius: 0;
         }
       }
 
       &:first-child {
         .sgds-button,
-        .input,
-        .select select {
+        .sgds-input,
+        .sgds-select select {
           border-bottom-right-radius: 0;
           border-top-right-radius: 0;
         }
@@ -701,16 +701,16 @@ $hint-color : $grey !default;
 
       &:last-child {
         .sgds-button,
-        .input,
-        .select select {
+        .sgds-input,
+        .sgds-select select {
           border-bottom-left-radius: 0;
           border-top-left-radius: 0;
         }
       }
 
       .sgds-button,
-      .input,
-      .select select {
+      .sgds-input,
+      .sgds-select select {
         &:not([disabled]) {
           &:hover,
           &.is-hovered {
@@ -744,7 +744,7 @@ $hint-color : $grey !default;
     }
 
     &.has-addons-fullwidth {
-      .control {
+      .sgds-control {
         flex-grow: 1;
         flex-shrink: 0;
       }
@@ -780,7 +780,7 @@ $hint-color : $grey !default;
     &.is-grouped-multiline {
       flex-wrap: wrap;
 
-      & > .control {
+      & > .sgds-control {
         &:last-child,
         &:not(:last-child) {
           margin-bottom: 0.75rem;
@@ -804,8 +804,8 @@ $hint-color : $grey !default;
   }
 }
 
-.field-label {
-  .label {
+.sgds-field-label {
+  .sgds-label {
     font-size: inherit;
   }
 
@@ -842,8 +842,8 @@ $hint-color : $grey !default;
   }
 }
 
-.field-body {
-  .field .field {
+.sgds-field-body {
+  .sgds-field .sgds-field {
     margin-bottom: 0;
   }
 
@@ -853,11 +853,11 @@ $hint-color : $grey !default;
     flex-grow: 5;
     flex-shrink: 1;
 
-    .field {
+    .sgds-field {
       margin-bottom: 0;
     }
 
-    & > .field {
+    & > .sgds-field {
       flex-shrink: 1;
 
       &:not(.is-narrow) {
@@ -871,7 +871,7 @@ $hint-color : $grey !default;
   }
 }
 
-.control {
+.sgds-control {
   clear: both;
   font-size: $size-normal;
   position: relative;
@@ -880,7 +880,7 @@ $hint-color : $grey !default;
   // Modifiers
   // DEPRECATED
   &.has-icon {
-    .icon {
+    .sgds-icon {
       color: $input-icon-color;
       height: 2.25em;
       pointer-events: none;
@@ -890,48 +890,48 @@ $hint-color : $grey !default;
       z-index: 4;
     }
 
-    .input {
+    .sgds-input {
       &:focus {
-        & + .icon {
+        & + .sgds-icon {
           color: $input-icon-active-color;
         }
       }
 
       &.is-small {
-        & + .icon {
+        & + .sgds-icon {
           font-size: $size-small;
         }
       }
 
       &.is-medium {
-        & + .icon {
+        & + .sgds-icon {
           font-size: $size-medium;
         }
       }
 
       &.is-large {
-        & + .icon {
+        & + .sgds-icon {
           font-size: $size-large;
         }
       }
     }
 
     &:not(.has-icon-right) {
-      .icon {
+      .sgds-icon {
         left: 0;
       }
 
-      .input {
+      .sgds-input {
         padding-left: 2.25em;
       }
     }
 
     &.has-icon-right {
-      .icon {
+      .sgds-icon {
         right: 0;
       }
 
-      .input {
+      .sgds-input {
         padding-right: 2.25em;
       }
     }
@@ -939,28 +939,28 @@ $hint-color : $grey !default;
 
   &.has-icons-left,
   &.has-icons-right {
-    .input,
-    .select {
+    .sgds-input,
+    .sgds-select {
       &:focus {
-        & ~ .icon {
+        & ~ .sgds-icon {
           color: $input-icon-active-color;
         }
       }
 
-      &.is-small ~ .icon {
+      &.is-small ~ .sgds-icon {
         font-size: $size-small;
       }
 
-      &.is-medium ~ .icon {
+      &.is-medium ~ .sgds-icon {
         font-size: $size-medium;
       }
 
-      &.is-large ~ .icon {
+      &.is-large ~ .sgds-icon {
         font-size: $size-large;
       }
     }
 
-    .icon {
+    .sgds-icon {
       color: $input-icon-color;
       height: 2.25em;
       pointer-events: none;
@@ -972,23 +972,23 @@ $hint-color : $grey !default;
   }
 
   &.has-icons-left {
-    .input,
-    .select select {
+    .sgds-input,
+    .sgds-select select {
       padding-left: 2.25em;
     }
 
-    .icon.is-left {
+    .sgds-icon.is-left {
       left: 0;
     }
   }
 
   &.has-icons-right {
-    .input,
-    .select select {
+    .sgds-input,
+    .sgds-select select {
       padding-right: 2.25em;
     }
 
-    .icon.is-right {
+    .sgds-icon.is-right {
       right: 0;
     }
   }

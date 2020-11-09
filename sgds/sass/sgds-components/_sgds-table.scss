@@ -19,7 +19,7 @@ $table-row-active-color: $primary-invert !default;
 $table-striped-row-even-background-color: $white-bis !default;
 $table-striped-row-even-hover-background-color: $white-ter !default;
 
-.table {
+.sgds-table {
   background-color: $table-background-color;
   color: $table-color;
   margin-bottom: 1.5rem;
@@ -172,7 +172,7 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
 
 // Isomer's Table
 table {
-  &.table-h {
+  &.sgds-table-h {
     tbody {
       tr {
         &:nth-of-type(odd) {
@@ -188,7 +188,7 @@ table {
     }
   }
 
-  &.table-v {
+  &.sgds-table-v {
     tbody {
       tr {
         &:first-child {

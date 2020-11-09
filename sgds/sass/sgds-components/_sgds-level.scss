@@ -1,4 +1,4 @@
-.level {
+.sgds-level {
   @include block;
 
   align-items: center;
@@ -17,16 +17,16 @@
   &.is-mobile {
     display: flex;
 
-    .level-left,
-    .level-right {
+    .sgds-level-left,
+    .sgds-level-right {
       display: flex;
     }
 
-    .level-left + .level-right {
+    .sgds-level-left + .sgds-level-right {
       margin-top: 0;
     }
 
-    .level-item {
+    .sgds-level-item {
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -43,7 +43,7 @@
   @include tablet {
     display: flex;
 
-    & > .level-item {
+    & > .sgds-level-item {
       &:not(.is-narrow) {
         flex-grow: 1;
       }
@@ -51,7 +51,7 @@
   }
 }
 
-.level-item {
+.sgds-level-item {
   align-items: center;
   display: flex;
   flex-basis: auto;
@@ -72,13 +72,13 @@
   }
 }
 
-.level-left,
-.level-right {
+.sgds-level-left,
+.sgds-level-right {
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
 
-  .level-item {
+  .sgds-level-item {
     // Modifiers
     &.is-flexible {
       flex-grow: 1;
@@ -93,13 +93,13 @@
   }
 }
 
-.level-left {
+.sgds-level-left {
   align-items: center;
   justify-content: flex-start;
 
   // Responsiveness
   @include mobile {
-    & + .level-right {
+    & + .sgds-level-right {
       margin-top: 1.5rem;
     }
   }
@@ -110,7 +110,7 @@
   }
 }
 
-.level-right {
+.sgds-level-right {
   align-items: center;
   justify-content: flex-end;
 

@@ -1,7 +1,7 @@
 #key-highlights{
    background-color: $secondary;
    color:white;
-   .col{
+   .sgds-col{
      padding:1.2rem 2rem !important;
      cursor:pointer;
      transition:all 0.5s;
@@ -16,7 +16,7 @@
        background-color: darken($secondary,10%);
      }
    }
-   .col:first-child {
+   .sgds-col:first-child {
      border-left: 0;
    }
  }

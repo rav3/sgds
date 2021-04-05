@@ -30,10 +30,6 @@ collections:
     permalink: /components/:path/
     output: true
     order: 4
-  helpers:
-    permalink: /components/:path/
-    output: true
-    order: 5
   guides:
     permalink: /guides/:path/
     output: true

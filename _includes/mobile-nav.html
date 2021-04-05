@@ -1,9 +1,9 @@
 <section class="sgds-section is-paddingless is-hidden-desktop mobile-side-nav">
-{% if page.url contains "/docs/" %}
+{% if page.url contains "/components/" %}
     <div class="sgds-dropdown is-fullwidth">
         <div class="sgds-dropdown-trigger">
             <button class="sgds-button is-outlined is-large" aria-haspopup="true" aria-controls="sgds-dropdown-menu">
-                <span>Docs</span>
+                <span>Components</span>
                 <span class="icon">
                     <span class="sgds-icon sgds-icon-chevron-down"></span>
                 </span>
@@ -11,23 +11,11 @@
         </div>
         <div class="sgds-dropdown-menu docs-nav-dropdown" id="sgds-dropdown-menu" role="menuitem">
             <div class="sgds-dropdown-content padding has-background-light">
-                <div class="row is-multiline is-mobile">
-                    <div class="col is-12">
-                            <a class="is-block is-size-7" href="/docs/getting-started/">Getting Started</a>
-                    </div>
-                    <div class="col is-12">
-                            <a class="is-block is-size-7" href="/docs/installation/">Installation</a>
-                    </div>
-                    <div class="col is-12">
-                            <a class="is-block is-size-7" href="/docs/customise-sgds/">Customise SGDS with Sass</a>
-                    </div>
-                </div>
                 {% assign collections = site.collections | sort: 'order' %}
                 {% for collection in collections %}
-                    {% if collection.label !='posts' and collection.label != 'guides' and collection.label != 'patterns' %}
-                        <hr class="margin--bottom--sm margin--top--sm">
+                    {% if collection.label !='posts' and collection.label != 'guides' and collection.label != 'patterns'  and collection.label != 'get-started' %}
                         {% assign name = collection.label %}
-                        <p>{{name | capitalize }}</p>
+                        <p><strong>{{name | capitalize }}</strong></p>
                         <div class="row is-multiline is-mobile">
                             {% assign items = site[name] | sort:'order' %}
                             {% for item in items %}

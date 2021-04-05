@@ -1,35 +1,34 @@
 ---
 title: Installation
 layout: layout-sidenav
-permalink: /components/installation/
+category: developers
 ---
 
 <h2>Installing SGDS</h2>
-<hr/>
+<hr />
 <h3>
-  Install directly in browsers using a free and highly available CDN:
+    Install directly in browsers using a free and highly available CDN:
 </h3>
 <h4>CSS</h4>
-{% highlight html %}
+{%- highlight html -%}
 <head>
     ...
     <!-- jsDelivr -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/sgds-govtech@{{ site.sgds-version }}/css/sgds.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sgds-govtech@{{ site.sgds-version }}/css/sgds.css" />
     <!-- Or unpkg -->
     <link rel="stylesheet" href="https://unpkg.com/sgds-govtech@{{ site.sgds-version }}/css/sgds.css" />
     ...
 </head>
-{% endhighlight %}
+{%- endhighlight -%}
+
 <h4>JavaScript</h4>
 <p>
     <a href="/components/">Certain components</a> of SGDS make use of
     JavaScript, with jQuery as an external dependency. <strong>If you only need the
-    visual parts of SGDS (i.e. css), you do not need to import the following.</strong>
+        visual parts of SGDS (i.e. css), you do not need to import the following.</strong>
 </p>
-{% highlight html %}
+
+{%- highlight html -%}
 <body>
     ...
     <!-- Make sure jQuery is loaded before sgds.js -->
@@ -41,7 +40,8 @@ permalink: /components/installation/
     <script src="https://unpkg.com/sgds-govtech@{{ site.sgds-version }}/js/sgds.js"></script>
     ...
 </body>
-{% endhighlight %}
+{%- endhighlight -%}
+
 <hr />
 <h3>Install using npm</h3>
 <p>
@@ -61,31 +61,31 @@ permalink: /components/installation/
     </li>
     <li>
         This will download sgds into <code>node_modules/sgds-govtech</code> in your current folder:
-{%- highlight bash -%}
-site/node_modules/sgds-govtech/ 
-  ├── css/
-  ├── fonts/
-  ├── js/
-  ├── * sgds/sass/
-{%- endhighlight -%}
+        {%- highlight bash -%}
+        site/node_modules/sgds-govtech/
+        ├── css/
+        ├── fonts/
+        ├── js/
+        ├── * sgds/sass/
+        {%- endhighlight -%}
         <i>* SGDS Sass source files, for <a href="/components/customise-sgds">advanced usage</a>.</i>
     </li>
     <li>
-        If you use a module bundler like Webpack, import sgds in your entry point: 
-{% highlight javascript %}
-import "sgds-govtech/css/sgds.css"; 
-import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
-{% endhighlight %}
+        If you use a module bundler like Webpack, import sgds in your entry point:
+        {%- highlight javascript -%}
+        import "sgds-govtech/css/sgds.css";
+        import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
+        {%- endhighlight -%}
         <i>*Note that usage with frameworks such as React, Vue or Angular is discouraged since they
-        manipulate the DOM in their own environments. Framework-specific 
-        implementations are in early development and can be found at
-        <a href="https://github.com/govtechsg/sgds-govtech-react">
-            sgds-govtech-react
-        </a>
-        and
-        <a href="https://github.com/govtechsg/sgds-govtech-vue">
-            sgds-govtech-vue
-        </a>.</i>
+            manipulate the DOM in their own environments. Framework-specific
+            implementations are in early development and can be found at
+            <a href="https://github.com/govtechsg/sgds-govtech-react">
+                sgds-govtech-react
+            </a>
+            and
+            <a href="https://github.com/govtechsg/sgds-govtech-vue">
+                sgds-govtech-vue
+            </a>.</i>
     </li>
 </ul>
 
@@ -97,26 +97,19 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
     in your production environment.
 </p>
 
-    <a
-        role="button"
-        rel="nofollow"
-        id="dl-DesignSystem"
-        class="sgds-button is-rounded is-primary"
-        href="/assets/downloads/sgds-govtech.zip"
-        target="_blank"
-        >Download SGDS package
-    </a
-    >
+<a role="button" rel="nofollow" id="dl-DesignSystem" class="sgds-button is-rounded is-primary"
+    href="/assets/downloads/sgds-govtech.zip" target="_blank">Download SGDS package
+</a>
 <p>The zip package contains the following files:</p>
 <ul>
-    
+
     <p><code>css/sgds.css</code></p>
     <p><code>js/sgds.js</code></p>
     <p><code>fonts/sgds-icons.svg</code></p>
     <p><code>fonts/sgds-icons.wott</code></p>
     <p><code>fonts/sgds-icons.ttf</code></p>
     <p><code>sgds/sass/...</code>(source files for <a href="/components/customise-sgds">advanced usage</a>)</p>
-    
+
     <li>
         Extract and copy the files and folders into a relevant place in your
         project’s code base
@@ -125,19 +118,21 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
         Reference the CSS and JavaScript files in each HTML page or templates in
         your project, same as above. Note that
         <a href="/components/">certain components</a> of SGDS make use of
-        JavaScript, with jQuery as an external dependency. 
-{%- highlight html -%}
-<head>
-    ...
-    <link rel="stylesheet" href="/my/static/files/css/sgds.css" />
-</head>
-<body>
-    ...
-    <!-- Make sure jQuery is included before sgds.js -->
-    <script src="/my/static/files/jquery-3.5.1.min.js"></script>
-    <script src="/my/static/files/js/sgds.js"></script>
-</body>
-{%- endhighlight -%}
+        JavaScript, with jQuery as an external dependency.
+        {%- highlight html -%}
+
+        <head>
+            ...
+            <link rel="stylesheet" href="/my/static/files/css/sgds.css" />
+        </head>
+
+        <body>
+            ...
+            <!-- Make sure jQuery is included before sgds.js -->
+            <script src="/my/static/files/jquery-3.5.1.min.js"></script>
+            <script src="/my/static/files/js/sgds.js"></script>
+        </body>
+        {%- endhighlight -%}
     </li>
 </ul>
 
@@ -147,9 +142,8 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
 <p>
     The SGDS source is written in Sass and JavaScript. Usage and development
     instructions can be found at
-    <a href="https://github.com/govtechsg/sgds"
-        >https://github.com/govtechsg/sgds</a
-    >. Bug reports and pull requests are also <a href="https://github.com/govtechsg/sgds/issues">welcome!</a>
+    <a href="https://github.com/govtechsg/sgds">https://github.com/govtechsg/sgds</a>. Bug reports and pull requests are
+    also <a href="https://github.com/govtechsg/sgds/issues">welcome!</a>
 </p>
 
 <hr />
@@ -172,25 +166,19 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
                 <span class="sgds-icon sgds-icon-circle-info is-size-4"></span>
                 <div class="sgds-notification-content">
                     The <b>Sitefinity resource package</b> is in the pilot
-                        phase, your valuable
-                        <a href="{{ site.feedback_form }}" target="_blank"
-                            >feedback</a
-                        >
-                        will help us in improving it.
+                    phase, your valuable
+                    <a href="{{ site.feedback_form }}" target="_blank">feedback</a>
+                    will help us in improving it.
                 </div>
             </div>
         </div>
-        
-        <a
-            role="button"
-            rel="nofollow"
-            class="sgds-button is-rounded margin--bottom margin--top is-primary"
-            href="/assets/downloads/sgds-sitefinity-theme.zip"
-            target="_blank"
-            ><span class="sgds-icon sgds-icon-sitefinity"></span>&nbsp;Download
+
+        <a role="button" rel="nofollow" class="sgds-button is-rounded margin--bottom margin--top is-primary"
+            href="/assets/downloads/sgds-sitefinity-theme.zip" target="_blank"><span
+                class="sgds-icon sgds-icon-sitefinity"></span>&nbsp;Download
             Sitefinity resource package
-    </a>
-        
+        </a>
+
         <p>
             All you have to do is copy the
             <b>Sitefinity resource package</b> folder and paste into your
@@ -200,24 +188,16 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
         <p>The Sitefinity <b>DesignSystem</b> resource package consist of:</p>
         <ol class="style-disc">
             <li>
-                SGDS Stylesheet<br /><code
-                    >/DesignSystem/assets/dist/css/sgds.css</code
-                >
+                SGDS Stylesheet<br /><code>/DesignSystem/assets/dist/css/sgds.css</code>
             </li>
             <li>
-                SGDS Javascript<br /><code
-                    >/DesignSystem/assets/dist/js/sgds.js</code
-                >
+                SGDS Javascript<br /><code>/DesignSystem/assets/dist/js/sgds.js</code>
             </li>
             <li>
-                SGDS Icon Library<br /><code
-                    >/DesignSystem/assets/dist/fonts/</code
-                >
+                SGDS Icon Library<br /><code>/DesignSystem/assets/dist/fonts/</code>
             </li>
             <li>
-                SGDS Grid System Template<br /><code
-                    >/DesignSystem/GridSystem/Templates</code
-                >
+                SGDS Grid System Template<br /><code>/DesignSystem/GridSystem/Templates</code>
                 <ul>
                     <li>
                         Section template<br />
@@ -242,9 +222,7 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
                     <li>Gov.sg masthead</li>
                     <li>
                         Navigation bar widget<br />
-                        <code
-                            >/DesignSystem/MVC/Views/Navigation/NavigationView.sgds.cshtml</code
-                        >
+                        <code>/DesignSystem/MVC/Views/Navigation/NavigationView.sgds.cshtml</code>
                     </li>
                     <li>Footer</li>
                 </ul>
@@ -263,24 +241,18 @@ import "sgds-govtech/js/sgds"; // Do not use with other web frameworks!
                 <span class="sgds-icon sgds-icon-circle-info is-size-4"></span>
                 <div class="sgds-notification-content">
                     The <b>Wordpress theme</b> is in the pilot phase, your
-                        valuable
-                        <a href="{{ site.feedback_form }}" target="_blank"
-                            >feedback</a
-                        >
-                        will help us in improving it.
+                    valuable
+                    <a href="{{ site.feedback_form }}" target="_blank">feedback</a>
+                    will help us in improving it.
                 </div>
             </div>
         </div>
-        <a
-            role="button"
-            rel="nofollow"
-            class="sgds-button is-rounded margin--bottom margin--top is-primary"
-            href="/assets/downloads/sgds-wordpress-theme.zip"
-            target="_blank"
-            ><span class="sgds-icon sgds-icon-wordpress"></span>&nbsp;Download
+        <a role="button" rel="nofollow" class="sgds-button is-rounded margin--bottom margin--top is-primary"
+            href="/assets/downloads/sgds-wordpress-theme.zip" target="_blank"><span
+                class="sgds-icon sgds-icon-wordpress"></span>&nbsp;Download
             Wordpress Theme
         </a>
-        
+
         <p>Adding the Wordpress theme to your project:</p>
         <ol class="style-disc">
             <li>

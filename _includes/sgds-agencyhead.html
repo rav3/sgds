@@ -43,7 +43,7 @@
                             </a>
                             <a
                                 class="sgds-button is-primary is-rounded is-small"
-                                href="/docs/installation/"
+                                href="/components/installation/"
                             >
                                 Install Design System
                             </a>
@@ -59,7 +59,7 @@
                             </a>
                             <a
                                 class="sgds-button is-primary is-rounded is-small"
-                                href="/docs/installation/"
+                                href="/components/installation/"
                             >
                                 Install Design System
                             </a>
@@ -95,7 +95,7 @@
 </div>
 
 {% comment %} Nav bar for mobile {% endcomment %}
-{% if page.url contains "/docs/" or page.url contains "/guides/" or page.url contains "/patterns/" %}
+{% if page.url contains "/components/" or page.url contains "/guides/" or page.url contains "/patterns/" or page.url contains "/get-started/" %}
     {% if page.title != 'Guides' %}
         {% include mobile-nav.html %}
     {% endif %}

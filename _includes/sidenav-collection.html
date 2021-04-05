@@ -36,6 +36,19 @@ Get collection that current page belongs to, then group each document by their s
             {%- endfor -%}
             </ul>
         </li>
+        {%- else -%}
+        {%- assign items = category.items | sort: "title" -%}
+        {%- for item in items -%}
+                {%- assign class = nil -%}
+                {%- if page.url contains item.url -%}
+                    {%- assign class = 'is-active' -%}
+                {%- endif -%}
+                <li>
+                    <a class="{{ class }}" href="{{ item.url }}">
+                        {{ item.title }}
+                    </a>
+                </li>
+            {%- endfor -%}
         {%- endif -%}
     {%- endfor -%}
 </ul>

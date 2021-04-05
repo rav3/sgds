@@ -1,7 +1,7 @@
 <ul class="sgds-menu-list">
     {% assign collections = site.collections | sort: 'order' %}
     {% for collection in collections %}
-    {% if collection.label !='posts' and collection.label != 'guides' and collection.label !='patterns' and collection.label !='get-started' %}
+    {% if collection.label !='posts' and collection.label != 'guides' and collection.label !='patterns' and collection.label !='get-started' and collection.label !='utilities' %}
         {% assign name = collection.label %}
         <li class="second-level-nav">
             <a class="second-level-nav-header">

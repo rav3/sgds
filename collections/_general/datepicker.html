@@ -7,7 +7,7 @@ js: true
 {% capture default-single-date %}
 <label class="label" for="datepicker1">Select a date</label>
 <div class="control has-icons-right">
-    <input class="input datepicker" type="text" placeholder="YYYY-MM-DD" id="datepicker" width="350">
+    <input class="input" type="text" placeholder="DD-MM-YYYY" id="datepicker1" width="350" data-id="datetime">
     <span class="icon is-small is-right">
         <i class="sgds-icon sgds-icon-calendar"></i>
     </span>
@@ -18,9 +18,9 @@ js: true
 <div class="sgds-container">
     <div class="row">
         <div class="col is-6">
-            <label class="label" for="datepicker">Select a start date</label>
+            <label class="label" for="datepicker1">Select a start date</label>
             <div class="control has-icons-right">
-                <input class="input datepicker" type="text" placeholder="YYYY-MM-DD" id="datepicker" width="350">
+                <input class="input" type="text" placeholder="DD-MM-YYYY" id="datepickerRange" width="350">
                 <span class="icon is-small is-right">
                     <i class="sgds-icon sgds-icon-calendar"></i>
                 </span>
@@ -29,7 +29,7 @@ js: true
         <div class="col is-6">
             <label class="label" for="datepicker">Select a end date</label>
             <div class="control has-icons-right">
-                <input class="input datepicker" type="text" placeholder="YYYY-MM-DD" id="datepicker" width="350">
+                <input class="input" type="text" placeholder="DD-MM-YYYY" id="secondRangeInput" width="350" disabled>
                 <span class="icon is-small is-right">
                     <i class="sgds-icon sgds-icon-calendar"></i>
                 </span>
@@ -49,6 +49,27 @@ js: true
 <div class="sgds-example-others">{{default-single-date}}</div>
 {%- highlight html -%}{{default-single-date}}{%- endhighlight -%}
 
-<h3>Select start date and end date</h3>
+<h3>Select date range</h3>
 <div class="sgds-example-others">{{default-start-end-date}}</div>
 {%- highlight html -%}{{default-start-end-date}}{%- endhighlight -%}
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.7/plugins/rangePlugin.js"></script>
+
+<script>
+    
+    const datepicker1 = flatpickr('#datepicker1', 
+        {
+            dateFormat: "d-m-Y",
+        }
+    );
+
+    const datepickerRange = flatpickr('#datepickerRange', 
+        {
+            dateFormat: "d-m-Y",
+            "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
+        }
+    );
+</script>
+
+<!-- "plugins": [new rangePlugin({ input: "#secondRangeInput"})] -->
